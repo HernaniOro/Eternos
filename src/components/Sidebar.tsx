@@ -57,6 +57,8 @@ export default function Sidebar({
 }) {
   const pathname = usePathname();
 
+  const basePath = process.env.__NEXT_ROUTER_BASEPATH || "";
+
   function handleHomeClick(e: React.MouseEvent) {
     if (pathname === "/") {
       e.preventDefault();
@@ -75,7 +77,7 @@ export default function Sidebar({
       <nav className="hidden md:flex sticky top-0 h-screen flex-col items-end pr-4 pt-4 w-[68px] xl:w-[275px]">
         {/* Logo */}
         <a
-          href="/"
+          href={basePath + "/"}
           onClick={handleHomeClick}
           className="flex items-center gap-3 px-3 py-3 rounded-full hover:bg-zinc-900 transition-colors mb-2 cursor-pointer"
         >
