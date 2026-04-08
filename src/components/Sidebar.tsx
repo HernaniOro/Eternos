@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { refreshSeed } from "@/lib/algorithm";
 
 function HomeIcon({ filled }: { filled?: boolean }) {
@@ -56,17 +56,12 @@ export default function Sidebar({
   onRefreshFeed?: () => void;
 }) {
   const pathname = usePathname();
-  const router = useRouter();
 
-  function handleHomeClick(e: React.MouseEvent) {
-    e.preventDefault();
+  function handleHomeClick() {
     refreshSeed();
+    onRefreshFeed?.();
     if (pathname === "/") {
-      onRefreshFeed?.();
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      onRefreshFeed?.();
-      router.push("/");
     }
   }
 
@@ -75,7 +70,8 @@ export default function Sidebar({
       {/* ── Desktop sidebar (hidden on mobile) ── */}
       <nav className="hidden md:flex sticky top-0 h-screen flex-col items-end pr-4 pt-4 w-[68px] xl:w-[275px]">
         {/* Logo */}
-        <button
+        <Link
+          href="/"
           onClick={handleHomeClick}
           className="flex items-center gap-3 px-3 py-3 rounded-full hover:bg-zinc-900 transition-colors mb-2 cursor-pointer"
         >
@@ -83,7 +79,7 @@ export default function Sidebar({
           <span className="hidden xl:block text-xl font-serif font-bold text-zinc-100">
             Mirabiles
           </span>
-        </button>
+        </Link>
 
         {navItems.map((item) => {
           const isActive = pathname === item.href;
@@ -91,10 +87,11 @@ export default function Sidebar({
 
           if (isHome) {
             return (
-              <button
+              <Link
                 key={item.href}
+                href="/"
                 onClick={handleHomeClick}
-                className={`flex items-center gap-4 px-3 py-3 rounded-full hover:bg-zinc-900 transition-colors w-full xl:w-auto cursor-pointer ${
+                className={`flex items-center gap-4 px-3 py-3 rounded-full hover:bg-zinc-900 transition-colors w-full xl:w-auto ${
                   isActive ? "font-bold" : ""
                 }`}
               >
@@ -102,7 +99,7 @@ export default function Sidebar({
                 <span className="hidden xl:block text-xl text-zinc-100">
                   {item.label}
                 </span>
-              </button>
+              </Link>
             );
           }
 
@@ -132,15 +129,16 @@ export default function Sidebar({
 
             if (isHome) {
               return (
-                <button
+                <Link
                   key={item.href}
+                  href="/"
                   onClick={handleHomeClick}
                   className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
                     isActive ? "text-zinc-100" : "text-zinc-500"
                   }`}
                 >
                   <item.Icon filled={isActive} />
-                </button>
+                </Link>
               );
             }
 
