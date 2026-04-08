@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.mirabiles.app',
-  appName: 'Mirabiles',
+  appId: 'com.eternos.app',
+  appName: 'Eternos',
   webDir: 'out',
   server: {
     androidScheme: 'https',

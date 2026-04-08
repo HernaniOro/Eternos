@@ -77,7 +77,7 @@ export default function Sidebar({
         >
           <span className="text-2xl font-serif font-bold text-zinc-100">M</span>
           <span className="hidden xl:block text-xl font-serif font-bold text-zinc-100">
-            Mirabiles
+            Eternos
           </span>
         </Link>
 

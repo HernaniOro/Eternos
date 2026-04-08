@@ -8,14 +8,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Mirabiles — A sabedoria dos admiráveis",
+  title: "Eternos — A sabedoria dos admiráveis",
   description:
     "Um feed onde São Tomás, Aristóteles, Jesus e os maiores pensadores da história compartilham verdade e virtude.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Mirabiles",
+    title: "Eternos",
   },
   icons: {
     icon: "/icons/icon-192.png",

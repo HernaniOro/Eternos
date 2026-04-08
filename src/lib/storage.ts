@@ -3,7 +3,7 @@
 import { UserState, EngagementEvent } from "@/data/types";
 import { posts as allPosts } from "@/data/posts";
 
-const STORAGE_KEY = "mirabiles-user";
+const STORAGE_KEY = "eternos-user";
 
 export const defaultState: UserState = {
   following: [],

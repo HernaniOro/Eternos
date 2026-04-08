@@ -7,12 +7,12 @@ let _sessionSeed: number | null = null;
 function getSessionSeed(): number {
   if (_sessionSeed !== null) return _sessionSeed;
   if (typeof window !== "undefined") {
-    const stored = sessionStorage.getItem("mirabiles-seed");
+    const stored = sessionStorage.getItem("eternos-seed");
     if (stored) {
       _sessionSeed = parseInt(stored, 10);
     } else {
       _sessionSeed = Math.floor(Math.random() * 2147483647);
-      sessionStorage.setItem("mirabiles-seed", _sessionSeed.toString());
+      sessionStorage.setItem("eternos-seed", _sessionSeed.toString());
     }
   } else {
     _sessionSeed = 42;
@@ -24,7 +24,7 @@ function getSessionSeed(): number {
 export function refreshSeed(): void {
   _sessionSeed = Math.floor(Math.random() * 2147483647);
   if (typeof window !== "undefined") {
-    sessionStorage.setItem("mirabiles-seed", _sessionSeed.toString());
+    sessionStorage.setItem("eternos-seed", _sessionSeed.toString());
   }
 }
 
