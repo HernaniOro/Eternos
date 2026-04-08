@@ -75,7 +75,7 @@ export default function Sidebar({
           onClick={handleHomeClick}
           className="flex items-center gap-3 px-3 py-3 rounded-full hover:bg-zinc-900 transition-colors mb-2 cursor-pointer"
         >
-          <span className="text-2xl font-serif font-bold text-zinc-100">M</span>
+          <span className="text-2xl font-serif font-bold text-zinc-100">E</span>
           <span className="hidden xl:block text-xl font-serif font-bold text-zinc-100">
             Eternos
           </span>
