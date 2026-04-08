@@ -1,9 +1,9 @@
 // ═══════════════════════════════════════════════════════════════
-// Mirabiles Service Worker — Full Offline Support
+// Eternos Service Worker — Full Offline Support
 // Strategy: Cache-first for static assets, network-first for pages
 // ═══════════════════════════════════════════════════════════════
 
-const CACHE_NAME = "mirabiles-v1";
+const CACHE_NAME = "eternos-v1";
 
 // Pre-cache essential shell on install
 const BASE = "/Eternos";
