@@ -1,0 +1,25 @@
+{
+  "name": "Mirabiles — A sabedoria dos admiráveis",
+  "short_name": "Mirabiles",
+  "description": "Um feed onde os maiores pensadores da história compartilham verdade e virtude.",
+  "start_url": "/Eternos/",
+  "scope": "/Eternos/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/Eternos/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Eternos/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
