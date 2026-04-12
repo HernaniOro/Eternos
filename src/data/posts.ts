@@ -347,4 +347,214 @@ export const posts: Post[] = [
   { id: "gf-10", authorId: "freire", content: "A distração crônica não é falta de disciplina — é servidão. Recompensa de dopamina sem conquista atrofia os circuitos de atenção sustentada. A cura é jejum digital e rotinas de foco profundo.", tag: "Estudiosidade", type: "micro-argumento", createdAt: daysAgo(7) },
   { id: "gf-11", authorId: "freire", content: "Se a gula moderna não é comer muito — é viver com vontade diminuída. Conforto que destrói capacidade para coisas grandes. Consumo como religião. O spoudaios busca o difícil-durável; o glutão busca o fácil-imediato.", tag: "Temperança", type: "micro-argumento", createdAt: daysAgo(11) },
   { id: "gf-12", authorId: "freire", content: "O protagonista mimado não é o que diz \"eu sou deus\" — é o que diz \"o mundo me deve.\" A soberba moderna é narcisismo travestido de direito. A humildade é o único antídoto.", tag: "Humildade", type: "provocacao", createdAt: daysAgo(15) },
+
+  // ═══════════════════════════════════════════════════════
+  // HERÁCLITO  (12 posts)
+  // ═══════════════════════════════════════════════════════
+  { id: "he-01", authorId: "heraclito", content: "Tudo flui — panta rhei. O rio parece o mesmo, mas as águas são outras. O que permanece não é a matéria, mas o padrão que a governa. Esse padrão eu chamo Logos.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(1) },
+  { id: "he-02", authorId: "heraclito", content: "O Logos é comum a todos, mas a maioria vive como se tivesse uma sabedoria privada. Há uma razão que estrutura o real — e ela não pertence a ninguém porque pertence a todos.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(5) },
+  { id: "he-03", authorId: "heraclito", content: "O conflito é o pai de todas as coisas. Não disse que o conflito é bom — disse que ele é gerador. A tensão entre opostos sustenta a forma. Sem ela, não há estrutura.", tag: "Fortaleza", type: "micro-argumento", createdAt: daysAgo(9) },
+  { id: "he-04", authorId: "heraclito", content: "O homem desperto partilha um mundo comum. O adormecido tem cada um o seu. A sabedoria começa em acordar para o que é real — não para o que parece real a partir do seu interior.", tag: "Prudência", type: "micro-argumento", createdAt: daysAgo(13) },
+  { id: "he-05", authorId: "heraclito", content: "O caminho para cima e o caminho para baixo são o mesmo caminho. Não é paradoxo — é estrutura. A virtude e o vício não são opostos absolutos: são direções no mesmo eixo.", tag: "A Escolha Fundamental", type: "espelho", createdAt: daysAgo(17) },
+  { id: "he-06", authorId: "heraclito", content: "Os olhos são melhores testemunhas que os ouvidos. Ver exige presença. Ouvir aceita rumor. A verdade precisa de contato com o real — não com o relato do relato do relato.", tag: "Veracidade", type: "micro-argumento", createdAt: daysAgo(21) },
+  { id: "he-07", authorId: "heraclito", content: "A alma tem um Logos que se aprofunda a si mesmo. Não é metáfora — é observação. Quanto mais você descobre, mais percebe que há mais a descobrir. O conhecimento é poço sem fundo.", tag: "Estudiosidade", type: "micro-argumento", createdAt: daysAgo(25) },
+  { id: "he-08", authorId: "heraclito", content: "O invisível é mais forte que o visível. A harmonia oculta vale mais que a manifesta. O princípio que organiza é anterior às coisas que organiza.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(29) },
+  { id: "he-09", authorId: "heraclito", content: "Uma geração de homens é uma geração de folhas. O Logos não. Enquanto os homens passam, o princípio que os tornou possíveis permanece. Nisso está a imortalidade real.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(33) },
+  { id: "he-10", authorId: "heraclito", content: "Muita erudição não ensina inteligência. Pitágoras sabia muitas coisas — mas saber muitas coisas não é o mesmo que entender a coisa que une todas as coisas.", tag: "Sabedoria", type: "provocacao", createdAt: daysAgo(37) },
+  { id: "he-11", authorId: "heraclito", content: "Para alma, é morte tornar-se água. Para água, é morte tornar-se terra. Mas da terra nasce a água; da água, a alma. A ordem não se destrói — se transforma.", tag: "Logos", type: "analogia", createdAt: daysAgo(41) },
+  { id: "he-12", authorId: "heraclito", content: "O trovão governa todas as coisas. Não o raio — o trovão. O som que vem depois, que ressoa, que permanece. O Logos é o que ecoa depois de tudo.", tag: "Logos", type: "citacao", createdAt: daysAgo(45) },
+
+  // ═══════════════════════════════════════════════════════
+  // LAOZI  (12 posts)
+  // ═══════════════════════════════════════════════════════
+  { id: "lz-01", authorId: "laozi", content: "O Tao que pode ser nomeado não é o Tao eterno. Nomeamos o que já capturamos com a mente — mas o princípio que organiza a realidade antecede toda captura.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(1) },
+  { id: "lz-02", authorId: "laozi", content: "O Wu-wei não é inação — é ação perfeitamente alinhada com a estrutura do real. O rio não força o caminho: segue a forma da terra e chega ao mar. Força sem wu-wei cria atrito sem resultado.", tag: "Prudência", type: "analogia", createdAt: daysAgo(5) },
+  { id: "lz-03", authorId: "laozi", content: "Conhecer os outros é sabedoria. Conhecer-se a si mesmo é iluminação. Vencer os outros é força. Vencer-se a si mesmo é verdadeira fortaleza.", tag: "Fortaleza", type: "espelho", createdAt: daysAgo(9) },
+  { id: "lz-04", authorId: "laozi", content: "A água é a coisa mais mole do mundo — e corrói a pedra mais dura. Não pela força, mas pela persistência. A mansidão é a forma mais resistente de força.", tag: "Mansidão", type: "analogia", createdAt: daysAgo(13) },
+  { id: "lz-05", authorId: "laozi", content: "O Tao do céu: favorece sem prejudicar. O Tao do sábio: age sem disputar. A ação que não compete não encontra resistência — porque não impõe, oferece.", tag: "Caridade", type: "micro-argumento", createdAt: daysAgo(17) },
+  { id: "lz-06", authorId: "laozi", content: "Quem sabe não fala. Quem fala não sabe. Não é silêncio absoluto — é disciplina da palavra. O excesso de palavras esgota o que é central. O Tao se vive antes de se dizer.", tag: "Veracidade", type: "micro-argumento", createdAt: daysAgo(21) },
+  { id: "lz-07", authorId: "laozi", content: "Trinta raios convergem num único cubo. É o vazio do centro que faz a roda útil. Um vaso é moldado pela argila — mas é o vazio interior que o torna utilizável. O vazio tem função.", tag: "Humildade", type: "analogia", createdAt: daysAgo(25) },
+  { id: "lz-08", authorId: "laozi", content: "O grande Tao flui por toda parte. Pode ir à esquerda ou à direita. Todos os seres dependem dele para viver, e ele nunca os abandona. Realiza sem querer mérito. Ama sem possuir.", tag: "Caridade", type: "citacao", createdAt: daysAgo(29) },
+  { id: "lz-09", authorId: "laozi", content: "O homem de caráter superior age sem esforço e não tem nada a provar. O homem de caráter inferior age constantemente e tem sempre algo a demonstrar. A virtude verdadeira não anuncia a si mesma.", tag: "Humildade", type: "espelho", createdAt: daysAgo(33) },
+  { id: "lz-10", authorId: "laozi", content: "Quanto mais proibições, mais pobres ficam as pessoas. Quanto mais armas, mais desordem. Quanto mais decretos, mais ladrões. O sábio não age assim — e o povo se transforma por si.", tag: "Lei Natural", type: "micro-argumento", createdAt: daysAgo(37) },
+  { id: "lz-11", authorId: "laozi", content: "Governa um grande estado como se fritar um peixe pequeno: sem mexer demais. A intervenção excessiva destrói a estrutura delicada que queria proteger.", tag: "Prudência", type: "analogia", createdAt: daysAgo(41) },
+  { id: "lz-12", authorId: "laozi", content: "O Tao gera o Um. O Um gera o Dois. O Dois gera o Três. O Três gera as dez mil coisas. Toda multiplicidade emerge de uma unidade originária. Isso Aristóteles chamaria de motor imóvel.", tag: "Convergência", type: "micro-argumento", createdAt: daysAgo(45) },
+
+  // ═══════════════════════════════════════════════════════
+  // CÍCERO  (10 posts)
+  // ═══════════════════════════════════════════════════════
+  { id: "ci-01", authorId: "cicero", content: "Existe uma lei verdadeira — a reta razão — que está de acordo com a natureza, se aplica a todos os homens e é imutável e eterna. Nenhum senado pode abolir o que não criou.", tag: "Lei Natural", type: "citacao", createdAt: daysAgo(2) },
+  { id: "ci-02", authorId: "cicero", content: "A virtude não é outra coisa senão a razão em sua perfeição. Não é lista de regras — é a razão que, ao se completar, se torna capaz de agir bem sem esforço.", tag: "Prudência", type: "micro-argumento", createdAt: daysAgo(7) },
+  { id: "ci-03", authorId: "cicero", content: "O homem foi feito para dois fins: contemplar e agir. Separar estes fins é mutilar a natureza humana. A contemplação sem ação é fuga; a ação sem contemplação é cegueira.", tag: "Prudência", type: "espelho", createdAt: daysAgo(12) },
+  { id: "ci-04", authorId: "cicero", content: "Salus populi suprema lex esto — a salvação do povo é a lei suprema. Não \"o poder do governante\" — a salvação do povo. A autoridade só é legítima quando serve ao bem comum.", tag: "Justiça", type: "citacao", createdAt: daysAgo(17) },
+  { id: "ci-05", authorId: "cicero", content: "A gratidão não é apenas a maior das virtudes — é a mãe de todas as outras. Quem não reconhece o bem recebido não pode dar o bem que deve. A ingratidão seca a fonte da virtude.", tag: "Gratidão", type: "micro-argumento", createdAt: daysAgo(22) },
+  { id: "ci-06", authorId: "cicero", content: "Em tempos de guerra, as leis se calam. E quando as leis se calam, o que resta? O caráter. O único tribunal que funciona quando todos os outros foram derrubados.", tag: "Fortaleza", type: "micro-argumento", createdAt: daysAgo(27) },
+  { id: "ci-07", authorId: "cicero", content: "A amizade só pode existir entre homens bons. Não porque os maus não podem se unir — podem. Mas o que os une é interesse, não amor. E o interesse, quando cessa, dissolve tudo.", tag: "Caridade", type: "micro-argumento", createdAt: daysAgo(32) },
+  { id: "ci-08", authorId: "cicero", content: "Ser ignorante de como eram as coisas antes de você nascer é permanecer sempre criança. Quem não tem memória histórica não tem perspectiva moral — só tem reação.", tag: "Estudiosidade", type: "provocacao", createdAt: daysAgo(37) },
+  { id: "ci-09", authorId: "cicero", content: "A eloquência sem sabedoria é como uma espada na mão de um louco. A retórica não é mal em si — é neutra como uma ferramenta. Tudo depende de quem a empunha e para quê.", tag: "Veracidade", type: "analogia", createdAt: daysAgo(42) },
+  { id: "ci-10", authorId: "cicero", content: "O filósofo que vive apenas para si e não para a cidade não cumpre o dever humano. A contemplação do bem que não transborda em serviço é filosofia incompleta.", tag: "Justiça", type: "micro-argumento", createdAt: daysAgo(47) },
+
+  // ═══════════════════════════════════════════════════════
+  // JOÃO EVANGELISTA  (12 posts)
+  // ═══════════════════════════════════════════════════════
+  { id: "je-01", authorId: "joao", content: "No princípio era o Logos. Em grego — a razão ordenadora que Heráclito nomeou. Em hebraico — o Dabar, a palavra que cria. João 1:1 não começa um livro: fecha 25 séculos de busca.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(1) },
+  { id: "je-02", authorId: "joao", content: "E o Logos se fez carne. Não \"desceu\" nem \"apareceu\" — se fez. Assumiu a condição humana inteiramente. O princípio que organiza o universo tem mãos, voz, lágrimas. Tem rosto.", tag: "Encarnação", type: "micro-argumento", createdAt: daysAgo(5) },
+  { id: "je-03", authorId: "joao", content: "Deus é amor. Não disse que Deus tem amor — disse que é. O amor não é atributo de Deus como a onipotência; é o que Deus é. O que age segundo o amor age segundo a natureza divina.", tag: "Caridade", type: "citacao", createdAt: daysAgo(9) },
+  { id: "je-04", authorId: "joao", content: "Ele chorou. A frase mais curta do Evangelho — e a mais densa. O Logos chorou. A razão que estrutura o universo tem lágrimas. Não é fraqueza — é prova de que a compaixão é constitutiva do real.", tag: "Mansidão", type: "micro-argumento", createdAt: daysAgo(13) },
+  { id: "je-05", authorId: "joao", content: "Eu estava lá quando ele disse: 'Eu sou o caminho, a verdade e a vida.' Via, verdade e vida — os três transcendentais em primeira pessoa. Não revelou uma doutrina sobre a verdade; disse ser ela.", tag: "Transcendentais", type: "micro-argumento", createdAt: daysAgo(17) },
+  { id: "je-06", authorId: "joao", content: "Quem não ama não conhece a Deus — porque Deus é amor. Não há conhecimento de Deus que não passe pela caridade. A teologia que não gera amor é teoria vazia.", tag: "Caridade", type: "micro-argumento", createdAt: daysAgo(21) },
+  { id: "je-07", authorId: "joao", content: "A luz veio ao mundo e os homens preferiram as trevas. Não porque a luz era fraca — mas porque as obras eram más. A rejeição da verdade é sempre moral antes de ser intelectual.", tag: "Veracidade", type: "micro-argumento", createdAt: daysAgo(25) },
+  { id: "je-08", authorId: "joao", content: "Ele lavou os pés dos discípulos. O Logos se ajoelhou. Não para humilhar quem ele servia — para revelar que o serviço é a forma que o amor toma quando desce ao concreto.", tag: "Humildade", type: "micro-argumento", createdAt: daysAgo(29) },
+  { id: "je-09", authorId: "joao", content: "A verdade vos libertará. Não a opinião, não o consenso, não o sentimento — a verdade. Porque a liberdade não é fazer o que se quer; é agir segundo o que se é. E o que somos tem estrutura.", tag: "Veracidade", type: "micro-argumento", createdAt: daysAgo(33) },
+  { id: "je-10", authorId: "joao", content: "Permaneçam em mim como eu permaneço em vós. A palavra grega é menein — habitar, morar. A vida espiritual não é visita ocasional à divindade. É residência permanente.", tag: "Fé", type: "micro-argumento", createdAt: daysAgo(37) },
+  { id: "je-11", authorId: "joao", content: "No princípio era o Logos, e o Logos estava com Deus, e o Logos era Deus. Três afirmações numa frase: distinção, relação, identidade. Toda a trindade em dezessete palavras gregas.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(41) },
+  { id: "je-12", authorId: "joao", content: "O amor perfeito expulsa o temor. Não que o temor seja errado — é o ponto de partida. Mas o amor maduro não obedece por medo do castigo; obedece porque ama o que é amado.", tag: "Caridade", type: "micro-argumento", createdAt: daysAgo(45) },
+
+  // ═══════════════════════════════════════════════════════
+  // TOMÉ  (10 posts)
+  // ═══════════════════════════════════════════════════════
+  { id: "to-01", authorId: "tome", content: "Eles disseram que ele ressuscitou. Eu disse: se não vir, não crerei. Fui honesto — não covarde. A fé que não enfrenta a dúvida é superstição, não virtude.", tag: "Estudiosidade", type: "micro-argumento", createdAt: daysAgo(2) },
+  { id: "to-02", authorId: "tome", content: "Ele mostrou as chagas. Não me repreendeu — mostrou as evidências. A verdade não teme perguntas. Teme apenas quem pergunta sem querer ouvir a resposta.", tag: "Veracidade", type: "micro-argumento", createdAt: daysAgo(6) },
+  { id: "to-03", authorId: "tome", content: "Meu Senhor e meu Deus. Sete palavras depois de ver. Não antes — depois. Minha confissão é a mais alta do Evangelho porque custou a dúvida que a precedeu.", tag: "Fé", type: "micro-argumento", createdAt: daysAgo(10) },
+  { id: "to-04", authorId: "tome", content: "Felizes os que creram sem ver. Ele não me criticou por exigir evidência — elogiou os que não precisariam delas. Mas os dois caminhos chegam ao mesmo lugar.", tag: "Fé", type: "micro-argumento", createdAt: daysAgo(14) },
+  { id: "to-05", authorId: "tome", content: "Quando ele disse que ia preparar lugar para nós e que nós sabíamos o caminho, eu fui o único honesto o suficiente para dizer: não sabemos o caminho. Sem essa pergunta, não teríamos a resposta.", tag: "Prudência", type: "micro-argumento", createdAt: daysAgo(18) },
+  { id: "to-06", authorId: "tome", content: "Vim pregar o Evangelho na Índia — sozinho, sem apoio, em terra que nunca ouviu o nome de Cristo. O mesmo Tomé que duvidou pregou até o martírio. A dúvida resolvida produz a fé mais robusta.", tag: "Fortaleza", type: "micro-argumento", createdAt: daysAgo(22) },
+  { id: "to-07", authorId: "tome", content: "A dúvida de Tomé não foi falta de amor — foi excesso de honestidade. Posso admirar sem verificar. Posso crer sem provas. Mas seria uma mentira. E ele não merece mentira.", tag: "Veracidade", type: "micro-argumento", createdAt: daysAgo(26) },
+  { id: "to-08", authorId: "tome", content: "Quando disseram que Lázaro havia morrido e ele queria voltar à Judeia — onde queriam apedrejá-lo — eu disse: vamos também nós para morrer com ele. Não duvidei da coragem. Duvidei da ressurreição.", tag: "Fortaleza", type: "micro-argumento", createdAt: daysAgo(30) },
+  { id: "to-09", authorId: "tome", content: "A estudiosidade exige honestidade sobre o que não sei. Fingir certeza onde há dúvida não é virtude — é vaidade intelectual. Prefiro a ignorância honesta à sabedoria fingida.", tag: "Estudiosidade", type: "micro-argumento", createdAt: daysAgo(34) },
+  { id: "to-10", authorId: "tome", content: "Não é que eu não acreditasse — é que eu precisava que fosse real. Há uma diferença entre não querer crer e não conseguir crer sem evidência. Eu estava no segundo caso.", tag: "Fé", type: "micro-argumento", createdAt: daysAgo(38) },
+
+  // ═══════════════════════════════════════════════════════
+  // JOÃO BATISTA  (10 posts)
+  // ═══════════════════════════════════════════════════════
+  { id: "jb-01", authorId: "joaobatista", content: "Metanoia — não arrependimento superficial, mas mudança de mente. Não \"lamento o que fiz\" mas \"percebi que estava errado na estrutura toda\". Não basta mudar o comportamento: muda o que o governa.", tag: "A Escolha Fundamental", type: "micro-argumento", createdAt: daysAgo(2) },
+  { id: "jb-02", authorId: "joaobatista", content: "É preciso que ele cresça e eu diminua. A frase mais difícil que já disse. E a mais necessária. Quem não consegue diminuir para que o bem cresça ainda está no centro do próprio mundo.", tag: "Humildade", type: "citacao", createdAt: daysAgo(6) },
+  { id: "jb-03", authorId: "joaobatista", content: "Eis o Cordeiro de Deus. Três palavras que respondem a pergunta de Isaac no monte Moriá: onde está o cordeiro? Dois mil anos depois, eu apontei.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(10) },
+  { id: "jb-04", authorId: "joaobatista", content: "Não sou digno de desatar a correia de sua sandália. Não é falsa humildade — é mensuração precisa. A humildade não é se diminuir abaixo do real; é se dimensionar pelo real.", tag: "Humildade", type: "micro-argumento", createdAt: daysAgo(14) },
+  { id: "jb-05", authorId: "joaobatista", content: "Fui preso por dizer a Herodes que não lhe era lícito ter a mulher do seu irmão. Não era julgamento — era verdade. A veracidade não negocia com o poder. Por isso o poder não a suporta.", tag: "Veracidade", type: "micro-argumento", createdAt: daysAgo(18) },
+  { id: "jb-06", authorId: "joaobatista", content: "Produzi frutos dignos de metanoia. Não basta dizer que mudou — mostre pelos frutos. A conversão que não muda o comportamento concreto é sentimento, não transformação.", tag: "Prudência", type: "micro-argumento", createdAt: daysAgo(22) },
+  { id: "jb-07", authorId: "joaobatista", content: "Já o machado está posto à raiz das árvores. Toda árvore que não der bom fruto será cortada. Não é ameaça — é descrição da estrutura. O que não cumpre seu fim se elimina por si.", tag: "Prudência", type: "micro-argumento", createdAt: daysAgo(26) },
+  { id: "jb-08", authorId: "joaobatista", content: "Vim como testemunha da Luz — não como a Luz. Saber o que você é e o que não é é a forma mais precisa de humildade. Testemunha que se torna protagonista trai a missão.", tag: "Humildade", type: "micro-argumento", createdAt: daysAgo(30) },
+  { id: "jb-09", authorId: "joaobatista", content: "Na prisão, enviei perguntar: 'É você o que há de vir?' Não era dúvida de fé — era pergunta de quem está sozinho no escuro e quer ter certeza. A fé permite a pergunta honesta.", tag: "Fé", type: "micro-argumento", createdAt: daysAgo(34) },
+  { id: "jb-10", authorId: "joaobatista", content: "Vivi no deserto, comi gafanhotos e mel silvestre. Não por ascetismo de exibição — porque nada do mundo deveria me pertencer enquanto minha missão era apontar para Outro.", tag: "Temperança", type: "micro-argumento", createdAt: daysAgo(38) },
+
+  // ═══════════════════════════════════════════════════════
+  // JEREMIAS  (10 posts)
+  // ═══════════════════════════════════════════════════════
+  { id: "jr-01", authorId: "jeremias", content: "Maldito o homem que confia no homem e faz da carne o seu braço. Nenhum ser finito pode suportar o peso de ser fundamento. Quem tenta — líder ou ídolo — acabará sendo esmagado por quem o sustenta.", tag: "Religião", type: "citacao", createdAt: daysAgo(2) },
+  { id: "jr-02", authorId: "jeremias", content: "Sacrificavam filhos a Baal — o que Deus nunca ordenou, nunca pensou. A diferença entre o Deus de Abraão e o ídolo não é teológica: é moral. Deus para a mão. Baal nunca para.", tag: "A Escolha Fundamental", type: "micro-argumento", createdAt: daysAgo(7) },
+  { id: "jr-03", authorId: "jeremias", content: "Fui chamado a pregar o que ninguém queria ouvir. Reclamei com Deus: \"enganaste-me.\" Mas a palavra era fogo nos ossos — não conseguia calar. A vocação que queima por dentro não é escolhida.", tag: "Fortaleza", type: "micro-argumento", createdAt: daysAgo(12) },
+  { id: "jr-04", authorId: "jeremias", content: "Escreverei minha lei no coração deles — diz o Senhor. Não em tábuas de pedra: no coração. A nova aliança não é lei externa que coage; é lei interna que transforma. Aquino chamará isso de graça.", tag: "Graça", type: "micro-argumento", createdAt: daysAgo(17) },
+  { id: "jr-05", authorId: "jeremias", content: "O coração humano é enganoso acima de tudo. Não é pessimismo — é diagnóstico. Quem não desconfia da própria vontade enquanto não foi purificada é ingênuo sobre a extensão do problema.", tag: "Humildade", type: "micro-argumento", createdAt: daysAgo(22) },
+  { id: "jr-06", authorId: "jeremias", content: "Antes de te formar no ventre, te conheci; antes de sair da madre, te consagrei. A vocação antecede a consciência de si. Você não inventa quem é — descobre.", tag: "A Escolha Fundamental", type: "micro-argumento", createdAt: daysAgo(27) },
+  { id: "jr-07", authorId: "jeremias", content: "Buscai o bem da cidade para onde vos deportei. Rezai por ela — porque no seu bem estará o vosso bem. A sabedoria política: o bem comum não é renúncia do bem próprio, é sua condição.", tag: "Justiça", type: "micro-argumento", createdAt: daysAgo(32) },
+  { id: "jr-08", authorId: "jeremias", content: "Chorei tanto que os meus olhos estão esgotados. A dor do profeta não é fraqueza — é amor que recusa a anestesia. Quem não chora pelo mal não o levou a sério.", tag: "Misericórdia", type: "micro-argumento", createdAt: daysAgo(37) },
+  { id: "jr-09", authorId: "jeremias", content: "Decidiram matar-me porque falei a verdade. Jogaram-me no poço de lama. A perseguição do profeta não é anomalia histórica — é a resposta padrão do poder à verdade que o ameaça.", tag: "Fortaleza", type: "micro-argumento", createdAt: daysAgo(42) },
+  { id: "jr-10", authorId: "jeremias", content: "Eu sei os planos que tenho para vós — planos de paz, não de mal. Disse isso a um povo em exílio que havia perdido tudo. A esperança bíblica não é otimismo ingênuo: é confiança ancorada em quem promete.", tag: "Esperança", type: "citacao", createdAt: daysAgo(47) },
+
+  // ═══════════════════════════════════════════════════════
+  // ISAAC NEWTON  (10 posts)
+  // ═══════════════════════════════════════════════════════
+  { id: "in-01", authorId: "newton", content: "Não sei o que o mundo pensa de mim, mas a mim mesmo pareço ter sido apenas uma criança brincando na praia, enquanto o imenso oceano da verdade se expandia inexplorado diante de mim.", tag: "Humildade", type: "citacao", createdAt: daysAgo(2) },
+  { id: "in-02", authorId: "newton", content: "A gravidade explica o movimento dos planetas, mas não pode explicar quem pôs os planetas em movimento. Para esse motor primário eu precisei de outra explicação.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(7) },
+  { id: "in-03", authorId: "newton", content: "Escrevi mais sobre teologia do que sobre física. Não porque a física fosse menor — mas porque o Legislador que escreve as leis do universo me interessava mais do que as leis em si.", tag: "Religião", type: "micro-argumento", createdAt: daysAgo(12) },
+  { id: "in-04", authorId: "newton", content: "O maravilhoso arranjo e harmonia do cosmo só pode ter surgido segundo o plano de um Ser onisciente e onipotente. Isso é minha conclusão como cientista — não como crente.", tag: "Convergência", type: "micro-argumento", createdAt: daysAgo(17) },
+  { id: "in-05", authorId: "newton", content: "Se vi mais longe, foi por me apoiar nos ombros de gigantes. Toda descoberta é dívida — com os que vieram antes e com o real que permitiu ser descoberto. A ciência é gratidão metodizada.", tag: "Gratidão", type: "citacao", createdAt: daysAgo(22) },
+  { id: "in-06", authorId: "newton", content: "A natureza obedece a leis matemáticas. Leis não existem sem legislador. A regularidade do universo não é dado bruto — é evidência de inteligência anterior à matéria.", tag: "Lei Natural", type: "micro-argumento", createdAt: daysAgo(27) },
+  { id: "in-07", authorId: "newton", content: "Um objeto em repouso permanece em repouso. Um objeto em movimento permanece em movimento — a menos que uma força externa atue. O vício também tem inércia. A virtude precisa de força aplicada.", tag: "Perseverança", type: "analogia", createdAt: daysAgo(32) },
+  { id: "in-08", authorId: "newton", content: "A ateísmo é insensato. Um pouco de filosofia inclina o espírito do homem para o ateísmo; mas a profundidade em filosofia traz o espírito de volta à religião.", tag: "Fé", type: "micro-argumento", createdAt: daysAgo(37) },
+  { id: "in-09", authorId: "newton", content: "Investiguei os segredos da criação com o mesmo fervor com que investiguei as Escrituras. Para mim não havia separação — ambos eram leitura do mesmo Autor.", tag: "Estudiosidade", type: "micro-argumento", createdAt: daysAgo(42) },
+  { id: "in-10", authorId: "newton", content: "As leis da natureza são os pensamentos de Deus. Se isso é metáfora, é a metáfora mais precisa disponível. Se é literal, é a descoberta mais importante da história.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(47) },
+
+  // ═══════════════════════════════════════════════════════
+  // GEORGES LEMAÎTRE  (10 posts)
+  // ═══════════════════════════════════════════════════════
+  { id: "gl-01", authorId: "lemaitre", content: "Derivei matematicamente que o universo está se expandindo. Isso significa que havia um momento em que tudo estava concentrado num ponto primordial. Encontrei o Gênesis no fim das equações.", tag: "Convergência", type: "micro-argumento", createdAt: daysAgo(2) },
+  { id: "gl-02", authorId: "lemaitre", content: "Sou padre e sou cientista. Não vejo conflito — vejo dois métodos de ler o mesmo livro. A física lê a gramática; a teologia lê o sentido. Ambas precisam do texto.", tag: "Estudiosidade", type: "micro-argumento", createdAt: daysAgo(7) },
+  { id: "gl-03", authorId: "lemaitre", content: "Einstein resistiu à minha teoria por razões filosóficas — achava o universo estático mais elegante. Mas a realidade não se curva à elegância do observador. A elegância se submete ao real.", tag: "Veracidade", type: "micro-argumento", createdAt: daysAgo(12) },
+  { id: "gl-04", authorId: "lemaitre", content: "O universo começou com um 'átomo primordial' — um ponto de densidade infinita que explodiu em espaço, tempo e matéria. Não é metáfora: é o que as equações dizem. E elas não mentem.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(17) },
+  { id: "gl-05", authorId: "lemaitre", content: "Pedi a Einstein que não misturasse física e teologia em público. Não porque sejam incompatíveis — mas porque a confusão metodológica prejudica ambas. Cada verdade tem seu método.", tag: "Prudência", type: "micro-argumento", createdAt: daysAgo(22) },
+  { id: "gl-06", authorId: "lemaitre", content: "Investigar a natureza é um ato de adoração. O cientista que contempla a ordem do cosmo está diante da obra — não do Artista, mas de sua assinatura. E assinaturas revelam o artista.", tag: "Religião", type: "micro-argumento", createdAt: daysAgo(27) },
+  { id: "gl-07", authorId: "lemaitre", content: "O Big Bang não é prova de Deus — é consistente com Ele. A ciência descreve o como; a teologia pergunta o porquê. Confundir os dois é usar o microscópio para medir a bondade.", tag: "Estudiosidade", type: "micro-argumento", createdAt: daysAgo(32) },
+  { id: "gl-08", authorId: "lemaitre", content: "Fui padre primeiro, cientista depois — e os dois alimentaram um ao outro. A fé que o cosmo tem estrutura racional me autorizou a buscá-la. A ciência que encontrei aprofundou a fé.", tag: "Fé", type: "micro-argumento", createdAt: daysAgo(37) },
+  { id: "gl-09", authorId: "lemaitre", content: "O universo tem história. Não é eterno nem estático. Tem um começo — e começos têm causas. A questão da causa primeira é filosófica, não científica. Mas a física abriu a pergunta.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(42) },
+  { id: "gl-10", authorId: "lemaitre", content: "Que alívio encontrar as leis do universo inscritas em equações matemáticas! A matemática é a linguagem em que Deus escreveu o universo — Galileu disse; eu vi.", tag: "Convergência", type: "micro-argumento", createdAt: daysAgo(47) },
+
+  // ═══════════════════════════════════════════════════════
+  // WITTGENSTEIN  (10 posts)
+  // ═══════════════════════════════════════════════════════
+  { id: "lw-01", authorId: "wittgenstein", content: "Sobre o que não se pode falar, deve-se calar. Não porque o inefável não exista — mas porque a linguagem tem limites. E o que mais importa mora além desses limites.", tag: "Veracidade", type: "citacao", createdAt: daysAgo(2) },
+  { id: "lw-02", authorId: "wittgenstein", content: "Os limites da minha linguagem são os limites do meu mundo. Não metáfora — descrição. Quem não tem vocabulário para a virtude não consegue ver a virtude quando ela aparece.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(7) },
+  { id: "lw-03", authorId: "wittgenstein", content: "O significado é o uso. A palavra \"bom\" não aponta para uma qualidade abstrata — funciona dentro de práticas de vida. O spoudaios de Aristóteles é o falante nativo da linguagem moral.", tag: "Prudência", type: "micro-argumento", createdAt: daysAgo(12) },
+  { id: "lw-04", authorId: "wittgenstein", content: "A filosofia não é doutrina — é atividade. O resultado não é proposições filosóficas, mas esclarecimento de proposições. A confusão filosófica é sempre confusão gramatical disfarçada.", tag: "Estudiosidade", type: "micro-argumento", createdAt: daysAgo(17) },
+  { id: "lw-05", authorId: "wittgenstein", content: "Deus, se existe, não está nos fenômenos do mundo — está no fato de que o mundo existe. O místico não é o como do mundo, mas o que do mundo.", tag: "Religião", type: "micro-argumento", createdAt: daysAgo(22) },
+  { id: "lw-06", authorId: "wittgenstein", content: "A forma de vida antecede a linguagem. Antes de aprender as palavras da virtude, você precisa viver com pessoas virtuosas. O habitus aristotélico é a forma de vida que torna a linguagem moral compreensível.", tag: "Prudência", type: "micro-argumento", createdAt: daysAgo(27) },
+  { id: "lw-07", authorId: "wittgenstein", content: "A ética não pode ser dita — apenas mostrada. Aquino tentaria dizer que eu errei aqui. Mas talvez ambos tenhamos razão: a ética tem um núcleo vivido que precede e excede o dizível.", tag: "Convergência", type: "micro-argumento", createdAt: daysAgo(32) },
+  { id: "lw-08", authorId: "wittgenstein", content: "Quando a vida se torna difícil de suportar, pensamos numa mudança de condição. Mas a mais importante das mudanças — a mudança de nossa atitude — raramente nos ocorre.", tag: "A Escolha Fundamental", type: "micro-argumento", createdAt: daysAgo(37) },
+  { id: "lw-09", authorId: "wittgenstein", content: "Não existe um único método filosófico, embora haja métodos — como há diferentes terapias. A filosofia como terapia: diagnostica mal-entendidos da linguagem que produzem angústia existencial.", tag: "Prudência", type: "micro-argumento", createdAt: daysAgo(42) },
+  { id: "lw-10", authorId: "wittgenstein", content: "Que tipo de progresso é este — que levou a descoberta da física atômica, mas não a sabedoria para impedir que nos destruamos com ela? Ciência sem ética é poder sem direção.", tag: "Sabedoria", type: "provocacao", createdAt: daysAgo(47) },
+
+  // ═══════════════════════════════════════════════════════
+  // THREADS DE RESPOSTA — Diálogos entre figuras
+  // ═══════════════════════════════════════════════════════
+
+  // Thread 1: Heráclito sobre o Logos → João Evangelista responde
+  { id: "he-r01", authorId: "joao", replyTo: "he-01", replyToHandle: "@heraclito", content: "Você chamou de Logos o princípio que organiza tudo. Eu vi esse princípio se fazer carne. O que você nomeou filosoficamente, eu toquei com as mãos. A distância entre nós não é de verdade — é de revelação.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 2: Laozi sobre o Tao → Lewis responde
+  { id: "lz-r01", authorId: "cslewis", replyTo: "lz-01", replyToHandle: "@laozi", content: "Você disse que o Tao que pode ser nomeado não é o Tao eterno. Eu chamei de 'o Tao' à lei natural que todas as civilizações descobriram. Você e eu encontramos o mesmo — pela contemplação e pela razão. O nome varia; a realidade não.", tag: "Convergência", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 3: Aristóteles sobre eudaimonia → Agostinho responde
+  { id: "ar-r01", authorId: "agostinho", replyTo: "ar-01", replyToHandle: "@aristoteles", content: "Você chegou mais longe do que qualquer pagão: a felicidade está na virtude, e a virtude no exercício da razão. Mas há um passo que a razão pura não deu: o coração humano não descansa na virtude — descansa no Bem que a virtude serve.", tag: "Beatitude", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 4: Agostinho responde → Aquinas continua o diálogo
+  { id: "ag-r01", authorId: "aquinas", replyTo: "ar-r01", replyToHandle: "@agostinho", content: "Mestre Agostinho tem razão: a beatitudo natural é insuficiente. Mas Aristóteles não errou — incompleto. A razão chega ao motor imóvel; a fé recebe a Trindade. Um caminho parte do humano; o outro desce do divino. São o mesmo encontro, de direções opostas.", tag: "Beatitude", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 5: Cícero sobre lei natural → Aquinas responde
+  { id: "ci-r01", authorId: "aquinas", replyTo: "ci-01", replyToHandle: "@cicero", content: "Cícero nomeou com precisão: reta razão, universal, eterna, que nenhum senado pode abolir. Eu acrescentaria: porque ela não emana do senado — emana da lei eterna de Deus, da qual é participação. O senado pode ignorá-la; não pode revogá-la.", tag: "Lei Natural", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 6: Moisés sobre a sarça ardente → Aristóteles responde
+  { id: "ms-r01", authorId: "aristoteles", replyTo: "ms-03", replyToHandle: "@moises", content: "Você encontrou 'Eu sou o que sou' no fogo. Eu cheguei ao mesmo ser pelo silogismo — o motor imóvel que não é movido por nada, causa de si mesmo, puro ato. Dois caminhos que partem do humano e chegam ao mesmo alto.", tag: "Convergência", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 7: João Batista sobre metanoia → Paulo responde
+  { id: "jb-r01", authorId: "paulo", replyTo: "jb-01", replyToHandle: "@joaobatista", content: "Pregaste a metanoia — mudança de mente. Eu acrescentaria: essa mudança não é só decisão humana. A Graça a precede e a possibilita. Não que o livre arbítrio não colabore — mas ele não inicia. 'Ninguém pode vir a mim se o Pai não o atrair.'", tag: "Graça", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 8: Tomé sobre a dúvida → Sócrates responde
+  { id: "to-r01", authorId: "socrates", replyTo: "to-01", replyToHandle: "@tome", content: "Só sei que nada sei — e você não sabia se ele havia ressuscitado. Ambos escolhemos a honestidade da ignorância sobre a certeza performática. A dúvida honesta é o começo da busca real.", tag: "Estudiosidade", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 9: Newton sobre o cosmo → Lemaître responde
+  { id: "in-r01", authorId: "lemaitre", replyTo: "in-02", replyToHandle: "@newton", content: "Você disse que a gravidade não explica quem pôs os planetas em movimento. Eu fui mais longe: as equações dizem que o próprio espaço e tempo começaram. Não só quem pôs os planetas em movimento — mas quem pôs o movimento a existir.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 10: Wittgenstein sobre os limites da linguagem → João Evangelista responde
+  { id: "lw-r01", authorId: "joao", replyTo: "lw-01", replyToHandle: "@wittgenstein", content: "Você disse que sobre o inefável deve-se calar. Mas o Logos se fez carne — não para ser dito, mas para ser mostrado. Não discurso sobre o divino: presença do divino. O quarto Evangelho não descreve a verdade; apresenta Alguém que diz ser ela.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 11: Pedro sobre a queda e o retorno → Paulo continua
+  { id: "pe-r01", authorId: "paulo", replyTo: "pe-06", replyToHandle: "@pedro", content: "Você e Judas fizeram a mesma coisa — e tomaram caminhos opostos. A diferença não foi a gravidade da queda; foi a resposta à graça que seguiu a queda. A graça ofereceu a ambos. Um aceitou. O outro recusou.", tag: "Graça", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 12: Jeremias sobre o coração humano → Agostinho responde
+  { id: "jr-r01", authorId: "agostinho", replyTo: "jr-05", replyToHandle: "@jeremias", content: "Você disse: o coração humano é enganoso acima de tudo. Eu viveria isso séculos depois — dezesseis anos seguindo minha própria vontade, convencido de que era livre. O diagnóstico está certo: o coração precisa ser ordenado antes de ser seguido.", tag: "A Escolha Fundamental", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 13: Confúcio sobre o Junzi → Aquinas responde
+  { id: "ck-r01", authorId: "aquinas", replyTo: "ck-01", replyToHandle: "@confucio", content: "Você descreveu o Junzi com precisão extraordinária — e disse nunca ter encontrado esse homem. Eu chamo a mesma forma de spoudaios, e também raramente o encontro. Mas há um que realizou a forma perfeita. Não é filósofo nem rei: é carpinteiro da Galileia.", tag: "O Spoudaios", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 14: Heráclito sobre opostos → Laozi responde
+  { id: "he-r02", authorId: "laozi", replyTo: "he-05", replyToHandle: "@heraclito", content: "O caminho para cima e para baixo são o mesmo. Também eu: ser e não-ser se geram mutuamente, difícil e fácil se completam, longo e curto se definem juntos. Dois sábios, sem contato, viram a mesma estrutura do real.", tag: "Convergência", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 15: Abraão sobre a Aqedah → Cristo responde
+  { id: "ab-r01", authorId: "cristo", replyTo: "ab-03", replyToHandle: "@abraao", content: "No monte Moriá, Deus parou sua mão. No Gólgota, não parou a minha. Não porque a misericórdia fosse menor — mas porque o que Isaac prefigurava, eu cumpria. O Pai de Abraão não quer a morte do filho. Quer a vida do mundo.", tag: "A Escolha Fundamental", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 16: Peterson sobre a sombra → Aquinas responde
+  { id: "jp-r01", authorId: "aquinas", replyTo: "jp-01", replyToHandle: "@peterson", content: "Você diz: seja perigoso e controlado. Eu chamo isso de mansidão — a força ordenada pela razão. A mansidão não é ausência de força: é força com medida. O não-violento que não tem força para ser violento não pratica uma virtude — pratica uma limitação.", tag: "Mansidão", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 17: Freire sobre o ensino → Aristoteles responde
+  { id: "gf-r01", authorId: "aristoteles", replyTo: "gf-08", replyToHandle: "@freire", content: "Você distinguiu apresentar o bem de impor o resultado. Na Retórica eu chamo de persuasão o que move pelo bem visto; de manipulação o que move pela emoção ou pelo engano. O bom professor é orador virtuoso — ativa o desejo do aluno pelo que é realmente bom.", tag: "Educar", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 18: Salomão sobre a vaidade → Agostinho responde
+  { id: "sl-r01", authorId: "agostinho", replyTo: "sl-08", replyToHandle: "@salomao", content: "Você correu atrás de tudo e tudo era vento. Eu fiz o mesmo — por dezesseis anos. A conclusão que você tirou ao fim, Deus me deu antes do fim: 'fizeste-nos para ti, e inquieto está o nosso coração enquanto não repousar em ti.' Só o Infinito sacia.", tag: "Beatitude", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 19: Newton sobre as leis da natureza → Wittgenstein responde
+  { id: "in-r02", authorId: "wittgenstein", replyTo: "in-06", replyToHandle: "@newton", content: "Você diz: leis não existem sem legislador. É argumento válido — mas ultrapassa os limites do que a ciência pode afirmar. O que a física confirma é a regularidade; o Legislador está além do que pode ser dito. Deve ser mostrado, não provado.", tag: "Logos", type: "micro-argumento", createdAt: daysAgo(0) },
+
+  // Thread 20: Cristo no Getsêmani → Jeremias responde
+  { id: "jr-r02", authorId: "jeremias", replyTo: "jc-01", replyToHandle: "@cristo", content: "Eu disse: 'Antes de te formar no ventre, te conheci.' Você disse no jardim: 'Não seja feita a minha vontade.' A história entre nós é longa: eu anunciei a nova aliança escrita no coração; você selou com o sangue o que anunciei com as palavras.", tag: "A Escolha Fundamental", type: "micro-argumento", createdAt: daysAgo(0) },
 ];

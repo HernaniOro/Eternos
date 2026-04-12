@@ -116,6 +116,14 @@ export default function PostCard({
             </span>
           </div>
 
+          {/* Reply indicator — Twitter style */}
+          {post.replyToHandle && (
+            <p className="text-sm text-zinc-500 mt-0.5">
+              Respondendo a{" "}
+              <span className="text-sky-500">{post.replyToHandle}</span>
+            </p>
+          )}
+
           {/* Content */}
           <p className="mt-1 text-zinc-200 text-[15px] leading-relaxed whitespace-pre-wrap">
             {post.content}

@@ -16,6 +16,8 @@ export interface Post {
   tag: string; // virtude or principle
   type: "citacao" | "espelho" | "provocacao" | "micro-argumento" | "analogia";
   createdAt: string; // ISO date for sorting
+  replyTo?: string;       // post ID this replies to
+  replyToHandle?: string; // @handle of the original author (for display)
 }
 
 // ── Engagement tracking (inspired by Twitter's Real Graph) ──
