@@ -1,4 +1,12 @@
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-  <rect width='512' height='512' rx='96' fill='#000000'/>
-  <text x='256' y='340' text-anchor='middle' font-family='Georgia, serif' font-weight='bold' font-size='300' fill='#e4e4e7'>E</text>
+  <!-- Fundo escuro com cantos arredondados -->
+  <rect width='512' height='512' rx='96' fill='#0a0a0a'/>
+  <!-- Círculo âmbar suave ao fundo -->
+  <circle cx='256' cy='256' r='170' fill='#92400e' opacity='0.25'/>
+  <!-- Chama externa (laranja) -->
+  <path d='M256 80 C256 80 310 150 310 210 C310 260 285 290 285 290 C285 290 320 250 320 200 C320 200 370 270 340 340 C315 400 256 430 256 430 C256 430 196 400 172 340 C142 270 192 200 192 200 C192 250 227 290 227 290 C227 290 202 260 202 210 C202 150 256 80 256 80Z' fill='#d97706'/>
+  <!-- Chama interna (âmbar claro) -->
+  <path d='M256 140 C256 140 288 190 288 230 C288 265 270 285 270 285 C270 285 295 255 290 220 C290 220 315 258 300 305 C288 345 256 370 256 370 C256 370 224 345 212 305 C197 258 222 220 222 220 C217 255 242 285 242 285 C242 285 224 265 224 230 C224 190 256 140 256 140Z' fill='#fbbf24'/>
+  <!-- Núcleo branco -->
+  <path d='M256 190 C256 190 272 215 272 240 C272 260 260 272 256 278 C252 272 240 260 240 240 C240 215 256 190 256 190Z' fill='#fef3c7' opacity='0.9'/>
 </svg>
