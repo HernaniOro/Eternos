@@ -1,9 +1,15 @@
 import type { NextConfig } from "next";
 
+const isCapacitor = process.env.BUILD_TARGET === "capacitor";
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/Eternos",
-  assetPrefix: "/Eternos/",
+  ...(isCapacitor
+    ? {}
+    : {
+        basePath: "/Eternos",
+        assetPrefix: "/Eternos/",
+      }),
 };
 
 export default nextConfig;
