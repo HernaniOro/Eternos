@@ -1,46 +1,53 @@
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
   <defs>
-    <!-- Fundo: gradiente radial sutil -->
-    <radialGradient id="bg" cx="50%" cy="40%" r="65%">
-      <stop offset="0%" stop-color="#1c1c1e"/>
-      <stop offset="100%" stop-color="#0a0a0a"/>
+    <!-- Fundo escuro com gradiente radial sutil -->
+    <radialGradient id="bg" cx="38%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#282828"/>
+      <stop offset="100%" stop-color="#0e0e0e"/>
     </radialGradient>
-    <!-- E: gradiente quente ivory -->
-    <linearGradient id="eGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f5f0e8"/>
-      <stop offset="100%" stop-color="#d6cfc3"/>
+
+    <!-- Dourado com variação de tom para simular textura -->
+    <linearGradient id="gold" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%"   stop-color="#e8c04a"/>
+      <stop offset="20%"  stop-color="#f5d06a"/>
+      <stop offset="42%"  stop-color="#c8960c"/>
+      <stop offset="58%"  stop-color="#e0b030"/>
+      <stop offset="75%"  stop-color="#b87a08"/>
+      <stop offset="100%" stop-color="#d4a020"/>
     </linearGradient>
-    <!-- Cruz: gradiente âmbar dourado -->
-    <linearGradient id="crossGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#b45309"/>
-    </linearGradient>
-    <!-- Brilho suave sob o E -->
-    <filter id="glow" x="-15%" y="-15%" width="130%" height="130%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+
+    <!-- Sombra suave para a letra E -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="3" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+
+    <!-- Brilho leve sobre a cruz -->
+    <filter id="crossShine" x="-2%" y="-2%" width="104%" height="104%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset dx="0" dy="-2" result="offsetBlur"/>
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="over"/>
     </filter>
   </defs>
 
-  <!-- Fundo -->
-  <rect width='512' height='512' rx='108' fill='url(#bg)'/>
+  <!-- Fundo arredondado -->
+  <rect width='512' height='512' rx='96' fill='url(#bg)'/>
 
-  <!-- Sombra suave atrás do E para profundidade -->
-  <rect x='147' y='145' width='218' height='222' rx='12' fill='#000000' opacity='0.35' filter='url(#glow)'/>
+  <!-- Letra E — serif, branca, grande, com sombra -->
+  <text
+    x='258'
+    y='418'
+    text-anchor='middle'
+    font-family='Georgia, "Times New Roman", serif'
+    font-weight='bold'
+    font-size='490'
+    letter-spacing='-8'
+    fill='white'
+    filter='url(#shadow)'
+  >E</text>
 
-  <!-- Letra E — construída com retângulos precisos -->
-  <!-- Barra vertical esquerda -->
-  <rect x='148' y='144' width='54' height='224' rx='10' fill='url(#eGrad)'/>
-  <!-- Barra superior -->
-  <rect x='148' y='144' width='216' height='54' rx='10' fill='url(#eGrad)'/>
-  <!-- Barra do meio -->
-  <rect x='148' y='229' width='178' height='50' rx='10' fill='url(#eGrad)'/>
-  <!-- Barra inferior -->
-  <rect x='148' y='314' width='216' height='54' rx='10' fill='url(#eGrad)'/>
-
-  <!-- Cruz EM PÉ — proporcional, barra vertical mais longa -->
-  <!-- Vertical da cruz: de y=72 até y=192 -->
-  <rect x='367' y='68' width='22' height='128' rx='7' fill='url(#crossGrad)'/>
-  <!-- Horizontal da cruz: cruzando a 1/3 do topo -->
-  <rect x='330' y='104' width='96' height='22' rx='7' fill='url(#crossGrad)'/>
+  <!-- Cruz dourada — centrada no ícone -->
+  <!-- Barra vertical: de y=44 até y=468 -->
+  <rect x='224' y='44' width='64' height='424' rx='4' fill='url(#gold)' filter='url(#crossShine)'/>
+  <!-- Barra horizontal: de x=82 até x=430, centrada em y=196 -->
+  <rect x='82' y='164' width='348' height='64' rx='4' fill='url(#gold)' filter='url(#crossShine)'/>
 </svg>
