@@ -1,9 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { Post, Profile, UserState } from "@/data/types";
 import { timeAgo } from "@/lib/timeago";
 import Avatar from "./Avatar";
 import Link from "next/link";
+
+interface ReplyEntry {
+  post: Post;
+  profile: Profile;
+}
 
 interface PostCardProps {
   post: Post;
@@ -13,6 +19,7 @@ interface PostCardProps {
   onSave: (postId: string) => void;
   onShare?: (postId: string) => void;
   onHide?: (postId: string) => void;
+  replies?: ReplyEntry[];
 }
 
 function HeartIcon({ filled }: { filled: boolean }) {
@@ -65,6 +72,69 @@ function HideIcon() {
   );
 }
 
+function ChevronIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={`w-3.5 h-3.5 fill-none stroke-current stroke-2 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  );
+}
+
+function ReplyBubble({ entry, userState, onLike, onSave }: {
+  entry: ReplyEntry;
+  userState: UserState;
+  onLike: (id: string) => void;
+  onSave: (id: string) => void;
+}) {
+  const isLiked = userState.liked.includes(entry.post.id);
+  const isSaved = userState.saved.includes(entry.post.id);
+
+  return (
+    <div className="flex gap-2.5 py-2.5">
+      <Link href={`/profile/${entry.profile.id}`} className="shrink-0">
+        <Avatar profile={entry.profile} size="sm" />
+      </Link>
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-1.5 text-sm">
+          <Link
+            href={`/profile/${entry.profile.id}`}
+            className="font-bold text-zinc-100 hover:underline truncate"
+          >
+            {entry.profile.name}
+          </Link>
+          <span className="text-zinc-500 truncate text-xs">{entry.profile.handle}</span>
+          <span className="text-zinc-600 text-xs">·</span>
+          <span className="text-zinc-500 shrink-0 text-xs">{timeAgo(entry.post.createdAt)}</span>
+        </div>
+        <p className="mt-0.5 text-zinc-300 text-sm leading-relaxed whitespace-pre-wrap">
+          {entry.post.content}
+        </p>
+        <div className="flex items-center gap-5 mt-1.5 -ml-1.5">
+          <button
+            onClick={() => onLike(entry.post.id)}
+            className={`flex items-center gap-1 p-1.5 rounded-full transition-colors ${
+              isLiked ? "text-rose-500 hover:bg-rose-500/10" : "text-zinc-500 hover:text-rose-500 hover:bg-rose-500/10"
+            }`}
+          >
+            <HeartIcon filled={isLiked} />
+          </button>
+          <button
+            onClick={() => onSave(entry.post.id)}
+            className={`flex items-center gap-1 p-1.5 rounded-full transition-colors ${
+              isSaved ? "text-blue-500 hover:bg-blue-500/10" : "text-zinc-500 hover:text-blue-500 hover:bg-blue-500/10"
+            }`}
+          >
+            <BookmarkIcon filled={isSaved} />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PostCard({
   post,
   profile,
@@ -73,7 +143,10 @@ export default function PostCard({
   onSave,
   onShare,
   onHide,
+  replies = [],
 }: PostCardProps) {
+  const [repliesOpen, setRepliesOpen] = useState(false);
+
   const isLiked = userState.liked.includes(post.id);
   const isSaved = userState.saved.includes(post.id);
   const isShared = userState.shared?.includes(post.id) ?? false;
@@ -94,93 +167,118 @@ export default function PostCard({
   }
 
   return (
-    <article className="group px-4 py-3 border-b border-zinc-800 hover:bg-zinc-900/50 transition-colors">
-      <div className="flex gap-3">
-        <Link href={`/profile/${profile.id}`}>
-          <Avatar profile={profile} />
-        </Link>
+    <article className="group border-b border-zinc-800">
+      <div className="px-4 py-3 hover:bg-zinc-900/50 transition-colors">
+        <div className="flex gap-3">
+          <Link href={`/profile/${profile.id}`}>
+            <Avatar profile={profile} />
+          </Link>
 
-        <div className="flex-1 min-w-0">
-          {/* Header */}
-          <div className="flex items-center gap-1.5 text-sm">
-            <Link
-              href={`/profile/${profile.id}`}
-              className="font-bold text-zinc-100 hover:underline truncate"
-            >
-              {profile.name}
-            </Link>
-            <span className="text-zinc-500 truncate">{profile.handle}</span>
-            <span className="text-zinc-600">·</span>
-            <span className="text-zinc-500 shrink-0">
-              {timeAgo(post.createdAt)}
-            </span>
-          </div>
+          <div className="flex-1 min-w-0">
+            {/* Header */}
+            <div className="flex items-center gap-1.5 text-sm">
+              <Link
+                href={`/profile/${profile.id}`}
+                className="font-bold text-zinc-100 hover:underline truncate"
+              >
+                {profile.name}
+              </Link>
+              <span className="text-zinc-500 truncate">{profile.handle}</span>
+              <span className="text-zinc-600">·</span>
+              <span className="text-zinc-500 shrink-0">
+                {timeAgo(post.createdAt)}
+              </span>
+            </div>
 
-          {/* Reply indicator — Twitter style */}
-          {post.replyToHandle && (
-            <p className="text-sm text-zinc-500 mt-0.5">
-              Respondendo a{" "}
-              <span className="text-sky-500">{post.replyToHandle}</span>
+            {/* Content */}
+            <p className="mt-1 text-zinc-200 text-[15px] leading-relaxed whitespace-pre-wrap">
+              {post.content}
             </p>
-          )}
 
-          {/* Content */}
-          <p className="mt-1 text-zinc-200 text-[15px] leading-relaxed whitespace-pre-wrap">
-            {post.content}
-          </p>
+            {/* Tag */}
+            <div className="mt-2">
+              <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-zinc-800 text-zinc-400">
+                {post.tag}
+              </span>
+            </div>
 
-          {/* Tag */}
-          <div className="mt-2">
-            <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-zinc-800 text-zinc-400">
-              {post.tag}
-            </span>
-          </div>
+            {/* Actions */}
+            <div className="flex items-center gap-8 mt-2 -ml-2">
+              <button
+                onClick={() => onLike(post.id)}
+                className={`flex items-center gap-1.5 p-2 rounded-full transition-colors ${
+                  isLiked
+                    ? "text-rose-500 hover:bg-rose-500/10"
+                    : "text-zinc-500 hover:text-rose-500 hover:bg-rose-500/10"
+                }`}
+              >
+                <HeartIcon filled={isLiked} />
+              </button>
 
-          {/* Actions */}
-          <div className="flex items-center gap-8 mt-2 -ml-2">
-            <button
-              onClick={() => onLike(post.id)}
-              className={`flex items-center gap-1.5 p-2 rounded-full transition-colors ${
-                isLiked
-                  ? "text-rose-500 hover:bg-rose-500/10"
-                  : "text-zinc-500 hover:text-rose-500 hover:bg-rose-500/10"
-              }`}
-            >
-              <HeartIcon filled={isLiked} />
-            </button>
+              <button
+                onClick={() => onSave(post.id)}
+                className={`flex items-center gap-1.5 p-2 rounded-full transition-colors ${
+                  isSaved
+                    ? "text-blue-500 hover:bg-blue-500/10"
+                    : "text-zinc-500 hover:text-blue-500 hover:bg-blue-500/10"
+                }`}
+              >
+                <BookmarkIcon filled={isSaved} />
+              </button>
 
-            <button
-              onClick={() => onSave(post.id)}
-              className={`flex items-center gap-1.5 p-2 rounded-full transition-colors ${
-                isSaved
-                  ? "text-blue-500 hover:bg-blue-500/10"
-                  : "text-zinc-500 hover:text-blue-500 hover:bg-blue-500/10"
-              }`}
-            >
-              <BookmarkIcon filled={isSaved} />
-            </button>
+              <button
+                onClick={handleShare}
+                className={`flex items-center gap-1.5 p-2 rounded-full transition-colors ${
+                  isShared
+                    ? "text-emerald-500 hover:bg-emerald-500/10"
+                    : "text-zinc-500 hover:text-emerald-500 hover:bg-emerald-500/10"
+                }`}
+              >
+                <ShareIcon />
+              </button>
 
-            <button
-              onClick={handleShare}
-              className={`flex items-center gap-1.5 p-2 rounded-full transition-colors ${
-                isShared
-                  ? "text-emerald-500 hover:bg-emerald-500/10"
-                  : "text-zinc-500 hover:text-emerald-500 hover:bg-emerald-500/10"
-              }`}
-            >
-              <ShareIcon />
-            </button>
-
-            <button
-              onClick={() => onHide?.(post.id)}
-              className="flex items-center gap-1.5 p-2 rounded-full text-zinc-500 hover:text-orange-500 hover:bg-orange-500/10 transition-colors opacity-0 group-hover:opacity-100"
-              title="Ver menos assim"
-            >
-              <HideIcon />
-            </button>
+              <button
+                onClick={() => onHide?.(post.id)}
+                className="flex items-center gap-1.5 p-2 rounded-full text-zinc-500 hover:text-orange-500 hover:bg-orange-500/10 transition-colors opacity-0 group-hover:opacity-100"
+                title="Ver menos assim"
+              >
+                <HideIcon />
+              </button>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Replies dropdown */}
+      {replies.length > 0 && (
+        <div className="border-t border-zinc-800/60">
+          <button
+            onClick={() => setRepliesOpen((o) => !o)}
+            className="flex items-center gap-2 w-full px-4 py-2 text-sm text-sky-500 hover:bg-zinc-900/50 transition-colors"
+          >
+            <ChevronIcon open={repliesOpen} />
+            <span>
+              {repliesOpen
+                ? "Fechar respostas"
+                : `${replies.length} resposta${replies.length > 1 ? "s" : ""}`}
+            </span>
+          </button>
+
+          {repliesOpen && (
+            <div className="px-4 pb-2 border-t border-zinc-800/40 divide-y divide-zinc-800/40">
+              {replies.map((entry) => (
+                <ReplyBubble
+                  key={entry.post.id}
+                  entry={entry}
+                  userState={userState}
+                  onLike={onLike}
+                  onSave={onSave}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </article>
   );
 }

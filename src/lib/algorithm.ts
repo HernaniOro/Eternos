@@ -279,8 +279,10 @@ export function rankFeed(userState: UserState): Post[] {
    * 6. Add small jitter for freshness on reload
    */
 
-  // Stage 1: Score
-  let scored = allPosts.map((post) => scorePost(post, userState));
+  // Stage 1: Score — exclude reply posts (they appear as dropdowns under parent)
+  let scored = allPosts
+    .filter((post) => !post.replyTo)
+    .map((post) => scorePost(post, userState));
 
   // Filter out hidden
   scored = scored.filter((s) => !userState.hidden.includes(s.post.id));
