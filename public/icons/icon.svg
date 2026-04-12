@@ -1,20 +1,46 @@
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-  <!-- Fundo escuro -->
-  <rect width='512' height='512' rx='100' fill='#111111'/>
+  <defs>
+    <!-- Fundo: gradiente radial sutil -->
+    <radialGradient id="bg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1c1c1e"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </radialGradient>
+    <!-- E: gradiente quente ivory -->
+    <linearGradient id="eGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5f0e8"/>
+      <stop offset="100%" stop-color="#d6cfc3"/>
+    </linearGradient>
+    <!-- Cruz: gradiente âmbar dourado -->
+    <linearGradient id="crossGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <!-- Brilho suave sob o E -->
+    <filter id="glow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
 
-  <!-- Letra E (traço bold, fonte geométrica) -->
+  <!-- Fundo -->
+  <rect width='512' height='512' rx='108' fill='url(#bg)'/>
+
+  <!-- Sombra suave atrás do E para profundidade -->
+  <rect x='147' y='145' width='218' height='222' rx='12' fill='#000000' opacity='0.35' filter='url(#glow)'/>
+
+  <!-- Letra E — construída com retângulos precisos -->
   <!-- Barra vertical esquerda -->
-  <rect x='148' y='140' width='52' height='232' rx='8' fill='#f5f0e8'/>
+  <rect x='148' y='144' width='54' height='224' rx='10' fill='url(#eGrad)'/>
   <!-- Barra superior -->
-  <rect x='148' y='140' width='200' height='52' rx='8' fill='#f5f0e8'/>
+  <rect x='148' y='144' width='216' height='54' rx='10' fill='url(#eGrad)'/>
   <!-- Barra do meio -->
-  <rect x='148' y='230' width='168' height='52' rx='8' fill='#f5f0e8'/>
+  <rect x='148' y='229' width='178' height='50' rx='10' fill='url(#eGrad)'/>
   <!-- Barra inferior -->
-  <rect x='148' y='320' width='200' height='52' rx='8' fill='#f5f0e8'/>
+  <rect x='148' y='314' width='216' height='54' rx='10' fill='url(#eGrad)'/>
 
-  <!-- Cruz pequena — centralizada no quadrante superior direito do E -->
-  <!-- Barra horizontal da cruz -->
-  <rect x='310' y='108' width='68' height='18' rx='6' fill='#d97706'/>
-  <!-- Barra vertical da cruz -->
-  <rect x='341' y='80' width='18' height='72' rx='6' fill='#d97706'/>
+  <!-- Cruz EM PÉ — proporcional, barra vertical mais longa -->
+  <!-- Vertical da cruz: de y=72 até y=192 -->
+  <rect x='367' y='68' width='22' height='128' rx='7' fill='url(#crossGrad)'/>
+  <!-- Horizontal da cruz: cruzando a 1/3 do topo -->
+  <rect x='330' y='104' width='96' height='22' rx='7' fill='url(#crossGrad)'/>
 </svg>
